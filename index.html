@@ -136,12 +136,16 @@ iframe {
 </style>
 
 <script>
-function runDart(id, link){
-    // Sembunyikan semua iframe
-    document.querySelectorAll("iframe").forEach(f => {
-        f.style.display = "none";
-        f.src = "";
-    });
+function showImage(id, src){
+    var img = document.getElementById(id);
+
+    if(img.style.display === "none"){
+        img.style.display = "block";
+        img.src = src;
+    } else {
+        img.style.display = "none";
+    }
+}
 
     // Sembunyikan gambar
     document.getElementById("imgViewer").style.display = "none";
