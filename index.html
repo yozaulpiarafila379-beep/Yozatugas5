@@ -1,1 +1,230 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polimorfisme dan Abstraksi dalam Dart</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7f6;
+    margin:0;
+    padding:20px;
+    color:#333;
+    line-height:1.6;
+}
+.container {
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+.header {
+    border-left:6px solid #2f6fed;
+    padding-left:15px;
+    margin-bottom:30px;
+}
+
+h1 {
+    color:#2f6fed;
+    font-size:2.5em;
+    margin-bottom:10px;
+}
+h2 {
+    color:#4a4a4a;
+    font-size:1.8em;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+h3 {
+    color:#5a5a5a;
+    font-size:1.4em;
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+p {
+    margin-bottom:1em;
+}
+
+.code-box {
+    background:#2d2d2d; /* Darcula theme for code */
+    color:#f8f8f2;
+    padding:20px;
+    border-radius:8px;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word; /* Ensure long lines wrap */
+    margin-top:15px;
+    margin-bottom:20px;
+    overflow-x: auto; /* Enable horizontal scrolling for wide code */
+    font-size:0.95em;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.button {
+    background:#2f6fed;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:10px;
+    font-size:1em;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background:#1c5adb;
+}
+
+iframe {
+    width:100%;
+    height:400px;
+    border-radius:8px;
+    margin-top:15px;
+    border:1px solid #ddd;
+    display:none; /* Hidden by default */
+}
+
+.section {
+    margin-bottom:40px;
+    padding-bottom:20px;
+    border-bottom:1px dashed #e0e0e0;
+}
+.section:last-of-type {
+    border-bottom:none;
+    margin-bottom:0;
+}
+
+.note {
+    background:#e6f7ff;
+    border-left:4px solid #1890ff;
+    padding:10px 15px;
+    margin:15px 0;
+    border-radius:4px;
+    color:#0050b3;
+}
+
+.summary-box {
+    background:#f0f8ff;
+    border-left:5px solid #2f6fed;
+    padding:20px;
+    border-radius:8px;
+    margin-top:30px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.summary-box h2 {
+    color:#2f6fed;
+    border-bottom:none;
+    padding-bottom:0;
+    margin-top:0;
+}
+.summary-box ul {
+    list-style-type: disc;
+    margin-left:20px;
+}
+.summary-box li {
+    margin-bottom:0.5em;
+}
+
+</style>
+
+<script>
+function runDart(id, link){
+    // Sembunyikan semua iframe
+    document.querySelectorAll("iframe").forEach(f => {
+        f.style.display = "none";
+        f.src = "";
+    });
+
+    // Sembunyikan gambar
+    document.getElementById("imgViewer").style.display = "none";
+
+    // Tampilkan iframe
+    var frame = document.getElementById(id);
+    frame.style.display = "block";
+    frame.src = link;
+
+    frame.onload = function(){
+        frame.onload = null;
+        frame.src = link + "&run=true";
+    };
+}
+
+// 🔽 UNTUK GAMBAR
+function showImage(src){
+    // Sembunyikan semua iframe
+    document.querySelectorAll("iframe").forEach(f => {
+        f.style.display = "none";
+    });
+
+    var img = document.getElementById("imgViewer");
+    img.style.display = "block";
+    img.src = src;
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<div class="header" style="padding: 30px 20px; border-radius: 12px; background: #ffffff; border-left: 6px solid #2f6fed; text-align: center;">
+    
+    <!-- JUDUL UTAMA -->
+    <h1 style="color: #2f6fed; font-size: clamp(2.2em, 6vw, 2.8em); margin: 0; line-height: 1.3; font-weight: bold;">Multiple Inheritance</h1>
+    <h1 style="color: #2f6fed; font-size: clamp(2.2em, 6vw, 2.8em); margin: 5px 0; line-height: 1.3; font-weight: bold;">&</h1>
+    <h1 style="color: #2f6fed; font-size: clamp(2.2em, 6vw, 2.8em); margin: 0; line-height: 1.3; font-weight: bold;">Class Modifiers</h1>
+
+    <!-- GARIS PEMBATAS -->
+    <hr style="width: 60%; max-width: 300px; margin: 20px auto; border: none; height: 2px; background-color: #2f6fed;">
+
+    <!-- DATA DIRI -->
+    <div style="font-size: clamp(1.1em, 3vw, 1.4em); line-height: 2; color: #333;">
+        <p>Yoza Ulpia Rafila</p>
+        <p>251410004</p>
+        <p>SI2A</p>
+    </div>
+
+</div>
+
+    <!-- 1 -->
+<div class="section">
+<h2>1. Sealed Class </h2>
+<p>Sealed class adalah jenis class dalam Dart yang digunakan untuk membatasi pewarisan (inheritance), sehingga class tersebut hanya dapat diturunkan (di-extend) oleh class lain yang berada dalam file yang sama.</p>
+<h3>Kode Dart:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : Yoza Ulfia Rafila
+// NIM   : 251410004
+// Kelas : SI2A
+
+sealed class ApiResponse {}
+
+class Success extends ApiResponse {
+  final String message;
+  Success(this.message);
+}
+
+class Error extends ApiResponse {
+  final String errorMessage;
+  Error(this.errorMessage);
+}
+
+void main() {
+  print("Contoh penggunaan Sealed Class");
+}
+</code></pre>
+</div>
+<button class="button" onclick="showImage('vscode1.png')">
+Lihat Screenshot VS Code
+</button>
+
+<img id="imgViewer" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
+</div>
