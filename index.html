@@ -267,3 +267,54 @@ Tampilkan VS Code 2
 
 <img id="img2" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
+
+    <!-- 3 -->
+<div class="section">
+<h2>3. Base Class </h2>
+<p>
+Polimorfisme adalah konsep dalam pemrograman berorientasi objek yang memungkinkan
+sebuah method memiliki banyak bentuk perilaku. Salah satu bentuk polimorfisme adalah
+method overriding, yaitu ketika subclass mendefinisikan ulang method yang sudah ada
+pada superclass.
+
+Pada kode di atas, class Animal memiliki method speak() yang menampilkan suara umum.
+Kemudian class Dog sebagai turunan dari Animal melakukan overriding pada method tersebut
+untuk menghasilkan suara yang berbeda, yaitu "Woof!". Hal ini menunjukkan bahwa method
+yang sama dapat memiliki perilaku yang berbeda tergantung pada objek yang memanggilnya.
+</p>
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+    // Nama  : Yoza Ulfia Rafila
+// NIM   : 251410004
+// Kelas : SI2A
+
+class Animal {
+  void speak() {
+    print("Hewan bersuara");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void speak() {
+    print("Anjing: Woof!");
+  }
+}
+
+void main() {
+  Animal a = Animal();
+  a.speak();
+
+  Dog d = Dog();
+  d.speak();
+}
+</code></pre>
+</div>
+<button class="button" onclick="showImage('img3','vscode3.png')">
+Tampilkan VS Code 3
+</button>
+
+<img id="img3" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
+</div>
+
