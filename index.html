@@ -137,22 +137,36 @@ iframe {
 
 <script>
 function runDart(id, link){
-    // Sembunyikan semua iframe dan hentikan yang sedang berjalan
+    // Sembunyikan semua iframe
     document.querySelectorAll("iframe").forEach(f => {
         f.style.display = "none";
         f.src = "";
     });
 
-    // Tampilkan iframe yang dipilih
+    // Sembunyikan gambar
+    document.getElementById("imgViewer").style.display = "none";
+
+    // Tampilkan iframe
     var frame = document.getElementById(id);
     frame.style.display = "block";
     frame.src = link;
 
-    // Tunggu sampai DartPad selesai load, baru auto run
     frame.onload = function(){
         frame.onload = null;
         frame.src = link + "&run=true";
     };
+}
+
+// 🔽 UNTUK GAMBAR
+function showImage(src){
+    // Sembunyikan semua iframe
+    document.querySelectorAll("iframe").forEach(f => {
+        f.style.display = "none";
+    });
+
+    var img = document.getElementById("imgViewer");
+    img.style.display = "block";
+    img.src = src;
 }
 </script>
 </head>
