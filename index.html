@@ -195,75 +195,29 @@ function showImage(src){
 
     <!-- 1 -->
 <div class="section">
-<h2>1. Class Hewan (Polimorfisme)</h2>
-<p>Kode ini mendemonstrasikan polimorfisme dan abstraksi. Kelas abstrak Hewan memiliki metode bersuara() yang belum diimplementasikan. Subkelas seperti Kucing, Anjing, dan Burung kemudian menyediakan implementasi unik untuk bersuara(), menunjukkan perilaku yang berbeda dari metode yang sama.</p>
-<h3>Kode Dart:</h3>
+<h2>1. Sealed Class </h2>
+<p>Sealed class adalah jenis class dalam Dart yang digunakan untuk membatasi pewarisan (inheritance), sehingga class tersebut hanya dapat diturunkan (di-extend) oleh class lain yang berada dalam file yang sama.<h3>Kode Dart:</h3>
 <div class="code-box">
 <pre><code>
-// ==========================================
-// Nama  : Yoza Ulpia Rafila
+// Nama  : Yoza Ulfia Rafila
 // NIM   : 251410004
 // Kelas : SI2A
-// ==========================================
 
-abstract class Hewan {
-  String nama = "Hewan";
+sealed class ApiResponse {}
 
-  void bersuara();
+class Success extends ApiResponse {
+  final String message;
+  Success(this.message);
 }
 
-class Kucing extends Hewan {
-  Kucing() {
-    nama = "Kucing";
-  }
-
-  @override
-  void bersuara() {
-    print('$nama: Meong');
-  }
-}
-
-class Anjing extends Hewan {
-  Anjing() {
-    nama = "Anjing";
-  }
-
-  @override
-  void bersuara() {
-    print('$nama: Guk guk');
-  }
-}
-
-class Burung extends Hewan {
-  Burung() {
-    nama = "Burung";
-  }
-
-  @override
-  void bersuara() {
-    print('$nama: Cuit cuit');
-  }
+class Error extends ApiResponse {
+  final String errorMessage;
+  Error(this.errorMessage);
 }
 
 void main() {
-print("=== Tugas Polimorfisme & Abstraksi ===");
-print("Nama  : Yoza Ulpia Rafila");
-print("NIM   : 251410004");
-print("Kelas : SI2A");
-print("--------------------------");
-
-  List<Hewan> daftarHewan = [
-    Kucing(),
-    Anjing(),
-    Burung()
-  ];
-
-  for (var h in daftarHewan) {
-    h.bersuara();
-  }
+  print("Contoh penggunaan Sealed Class");
 }
-
-
 </code></pre>
 </div>
 <button class="button" onclick="runDart('f1','https://dartpad.dev/embed-inline.html?id=569d91a7d55a7348d68fff15153e81f8&split=60')">Run Dart 1 </button>
