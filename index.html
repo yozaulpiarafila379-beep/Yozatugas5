@@ -172,17 +172,16 @@ function showImage(id,src){
 
     <!-- 1 -->
 <div class="section">
-<h2>1. Sealed Class </h2>
+<h2>1. Pengenalan Sealed Class </h2>
 <p>
 Sealed class adalah jenis class dalam Dart yang digunakan untuk membatasi pewarisan (inheritance),
 sehingga class tersebut hanya dapat diturunkan (di-extend) oleh class lain yang berada dalam file yang sama.
-Dengan adanya batasan ini, pengembang dapat mengontrol dengan jelas class mana saja yang menjadi turunan,
-sehingga struktur program menjadi lebih aman, terorganisir, dan mudah dipahami.
+Dengan adanya pembatasan ini, pengembang dapat mengontrol dengan jelas struktur turunan class,
+sehingga program menjadi lebih aman, terorganisir, dan mudah dipahami.
 
-Konsep sealed class juga membantu dalam memastikan bahwa semua kemungkinan turunan sudah diketahui,
-sehingga memudahkan saat melakukan pengecekan tipe (type checking) dalam program. Hal ini sangat berguna
-dalam pembuatan aplikasi yang membutuhkan alur logika yang jelas, seperti penanganan kondisi sukses
-dan error.
+Pada contoh di atas, ApiResponse digunakan sebagai sealed class yang memiliki dua turunan,
+yaitu Success dan Error. Kedua class tersebut merepresentasikan kondisi berhasil dan gagal,
+sehingga memudahkan dalam pengelolaan alur program dan pengecekan tipe data.
 </p>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
