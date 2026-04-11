@@ -63,49 +63,40 @@ body::before{
     transform:translateY(-5px);
     box-shadow:0 0 25px #38bdf8;
 }
-
 /* ===== JUDUL UTAMA ===== */
 .header h1{
-    color:#38bdf8;
-    text-shadow:0 0 10px #38bdf8;
-}
-
-/* ===== NAMA, NIM, KELAS ===== */
-.identitas{
-    background:rgba(0,0,0,0.5);
-    padding:15px;
-    border-radius:10px;
-}
-
-.identitas p{
-    color:#e2e8f0;
-    text-shadow:0 0 5px rgba(255,255,255,0.2);
-    font-size:16px;
-    letter-spacing:1px;
+    color:#38bdf8; /* biru neon */
+    text-shadow:0 0 12px #38bdf8;
 }
 
 /* ===== JUDUL SOAL ===== */
 .section h2{
-    color:#22c55e;
-    text-shadow:0 0 8px #22c55e;
+    color:#0ea5e9; /* biru beda (lebih dalam) */
+    text-shadow:0 0 8px #0ea5e9;
 }
 
-/* ===== GARIS PEMBATAS (SUDAH DIPERBAIKI FULL) ===== */
+/* ===== GARIS PEMBATAS ===== */
 .section h2::after{
     content:"";
     display:block;
-    width:100%; /* ✅ sekarang full */
+    width:100%;
     height:2px;
-    background:linear-gradient(to right, transparent, #22c55e, transparent);
+    background:linear-gradient(to right, transparent, #38bdf8, transparent);
     margin-top:10px;
     margin-bottom:15px;
 }
 
-/* ===== ISI / PENGERTIAN ===== */
+/* ===== PENGERTIAN (DISAMAKAN) ===== */
 .section p{
-    color:#94a3b8;
+    color:#cbd5f5; /* satu warna konsisten */
     line-height:1.8;
     margin-top:15px;
+}
+
+/* ===== NAMA, NIM, KELAS ===== */
+.identitas p{
+    color:#7dd3fc; /* biru muda beda dari judul */
+    text-shadow:0 0 6px #38bdf8;
 }
 /* CODE */
 .code-box{
