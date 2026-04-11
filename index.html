@@ -18,7 +18,7 @@ body{
     color:#67e8f9;
 }
 
-/* BACKGROUND DARK */
+/* BACKGROUND */
 body::before{
     content:"";
     position:fixed;
@@ -30,7 +30,7 @@ body::before{
     z-index:-1;
 }
 
-/* HEADER (SUDAH FIX DARK) */
+/* HEADER */
 .header{
     padding:30px;
     text-align:center;
@@ -41,17 +41,17 @@ body::before{
     margin:20px;
 }
 
-.header h1{
+/* SAMAKAN WARNA */
+.header h1,
+.identitas p{
     color:#38bdf8;
-    text-shadow:0 0 10px #38bdf8,
-                 0 0 20px #0ea5e9;
+    text-shadow:0 0 10px #38bdf8;
 }
 
 /* IDENTITAS */
 .identitas{
     margin-top:15px;
     line-height:1.8;
-    color:#7dd3fc;
 }
 
 /* SECTION */
@@ -62,6 +62,35 @@ body::before{
     border-radius:12px;
     background:rgba(2,6,23,0.85);
     box-shadow:0 0 15px rgba(56,189,248,0.3);
+    transition:0.3s;
+}
+
+.section:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px #38bdf8;
+}
+
+/* JUDUL */
+.section h2{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* GARIS PEMBATAS */
+.section h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:2px;
+    background:#38bdf8;
+    margin-top:8px;
+    box-shadow:0 0 8px #38bdf8;
+}
+
+/* PARAGRAF */
+.section p{
+    margin-bottom:15px;
+    line-height:1.6;
 }
 
 /* CODE */
@@ -71,7 +100,7 @@ body::before{
     border-radius:10px;
     border:1px solid #38bdf8;
     overflow:auto;
-    margin-top:10px;
+    margin-top:15px;
 }
 
 /* CODE COLOR */
