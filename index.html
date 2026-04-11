@@ -136,17 +136,13 @@ iframe {
 </style>
 
 <script>
-function showImage(id, src){
-    var img = document.getElementById(id);
+function runDart(id, link){
+    // Sembunyikan semua iframe
+    document.querySelectorAll("iframe").forEach(f => {
+        f.style.display = "none";
+        f.src = "";
+    });
 
-    if(img.style.display === "none"){
-        img.style.display = "block";
-        img.src = src;
-    } else {
-        img.style.display = "none";
-    }
-}
-</script>
     // Sembunyikan gambar
     document.getElementById("imgViewer").style.display = "none";
 
@@ -225,9 +221,9 @@ void main() {
 }
 </code></pre>
 </div>
-<button onclick="showImage('img1','vscode1.png')">
-Tampilkan VS Code 1
+<button class="button" onclick="showImage('vscode1.png')">
+Lihat Screenshot VS Code
 </button>
 
-<img id="img1" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
+<img id="imgViewer" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
