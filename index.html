@@ -179,7 +179,7 @@ function showImage(id,src){
 
 </div>
 
-    <!-- 1 -->
+<!-- 1 -->
 <div class="section">
 <h2>1. Pengenalan Sealed Class </h2>
 <p>
@@ -223,7 +223,7 @@ Tampilkan VS Code 1
 <img id="img1" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
 
-     <!-- 2 -->
+<!-- 2 -->
 <div class="section">
 <h2>2. Keuntungan Penggunaan Sealed class </h2>
 <p>
@@ -276,7 +276,7 @@ Tampilkan VS Code 2
 <img id="img2" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
 
-    <!-- 3 -->
+<!-- 3 -->
 <div class="section">
 <h2>3. Polimorfisme (Method Overriding) </h2>
 <p>
@@ -326,7 +326,7 @@ Tampilkan VS Code 3
 <img id="img3" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
 
- <!-- 4 -->
+<!-- 4 -->
 <div class="section">
 <h2>4. Method Overriding Pada Class Turunan </h2>
 <p>
@@ -389,3 +389,51 @@ Tampilkan VS Code 4
 
 <img id="img4" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
+
+<!-- 5 -->
+<div class="section">
+<h2>5. Final Class dalam Dart </h2>
+<p>
+Final class adalah jenis class dalam Dart yang tidak dapat diwarisi (tidak bisa di-extend)
+oleh class lain. Hal ini bertujuan untuk menjaga agar struktur dan perilaku class tetap
+konsisten serta tidak dapat diubah melalui pewarisan.
+
+Pada kode berikut, class Settings didefinisikan sebagai final class yang memiliki atribut
+theme dan fontSize. Class ini digunakan untuk menyimpan dan menampilkan pengaturan aplikasi.
+Karena bersifat final, class Settings tidak dapat dijadikan sebagai superclass, sehingga
+lebih aman dari perubahan yang tidak diinginkan.
+
+Dengan demikian, penggunaan final class membantu menjaga kestabilan program dan memastikan
+bahwa class tersebut hanya digunakan sesuai dengan tujuan awal pembuatannya.
+</p>
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : Yoza Ulpia Rafila
+// NIM   : 251410004
+// Kelas : SI2A
+
+final class Settings {
+  String theme;
+  int fontSize;
+
+  Settings({required this.theme, required this.fontSize});
+
+  void showSettings() {
+    print("Theme: $theme, Font Size: $fontSize");
+  }
+}
+
+void main() {
+  Settings settings = Settings(theme: "Dark", fontSize: 14);
+  settings.showSettings();
+}
+</code></pre>
+</div>
+<button class="button" onclick="showImage('img5','vscode5.png')">
+Tampilkan VS Code 5
+</button>
+
+<img id="img5" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
+</div>
+
