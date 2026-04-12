@@ -147,23 +147,38 @@ img{
 let activeElement = null;
 
 function showContent(id) {
-    // Tutup yang sedang aktif
     if (activeElement) {
         activeElement.style.display = "none";
     }
 
     const el = document.getElementById(id);
 
-    // Kalau klik yang sama → tutup
     if (activeElement === el) {
         activeElement = null;
         return;
     }
 
-    // Tampilkan yang baru
     el.style.display = "block";
-
     activeElement = el;
+}
+
+// TAMBAHKAN DI SINI (di bawah showContent, masih dalam <script>)
+function runDart(id, url) {
+    if (activeElement) {
+        activeElement.style.display = "none";
+    }
+
+    const frame = document.getElementById(id);
+
+    if (activeElement === frame) {
+        activeElement = null;
+        return;
+    }
+
+    frame.src = url;
+    frame.style.display = "block";
+
+    activeElement = frame;
 }
 </script>
 </head>
