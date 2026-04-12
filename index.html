@@ -503,3 +503,51 @@ Tampilkan VS Code 6
 <img id="img6" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
 </div>
 
+<!-- 7 -->
+<div class="section">
+<h2>7. Penggunaan Ultility Class dengan Static Method </h2>
+<p>
+Utility class adalah class yang digunakan untuk menyediakan kumpulan method
+yang bersifat umum dan dapat digunakan tanpa harus membuat objek. Biasanya,
+utility class berisi method static yang dapat dipanggil langsung melalui nama class.
+
+Pada kode berikut, class MathUtils merupakan utility class yang didefinisikan
+sebagai final class dan memiliki method static yaitu tambah() dan kali().
+Method tersebut digunakan untuk melakukan operasi matematika sederhana tanpa
+perlu membuat objek dari class MathUtils.
+
+Dengan demikian, penggunaan utility class dengan static method membuat kode
+menjadi lebih efisien, praktis, dan mudah digunakan kembali dalam berbagai
+bagian program.
+</p>
+<h3>Kode Program VS Code:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : Yoza Ulpia Rafila
+// NIM   : 251410004
+// Kelas : SI2A
+
+final class MathUtils {
+  static int tambah(int a, int b) {
+    return a + b;
+  }
+
+  static int kali(int a, int b) {
+    return a * b;
+  }
+}
+
+void main() {
+  print("Penjumlahan: ${MathUtils.tambah(5, 3)}");
+  print("Perkalian: ${MathUtils.kali(5, 3)}");
+}
+</code></pre>
+</div>
+<button class="button" onclick="showImage('img7','vscode7.png')">
+Tampilkan VS Code 67
+</button>
+
+<img id="img7" style="display:none; width:100%; margin-top:15px; border-radius:8px;">
+</div>
+
+
