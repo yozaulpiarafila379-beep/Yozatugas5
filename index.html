@@ -144,15 +144,26 @@ img{
 }
 </style>
 <script>
-function showImage(id,src){
-    var img = document.getElementById(id);
+let activeElement = null;
 
-    if(img.style.display === "none"){
-        img.style.display = "block";
-        img.src = src;
-    } else {
-        img.style.display = "none";
+function showContent(id) {
+    // Tutup yang sedang aktif
+    if (activeElement) {
+        activeElement.style.display = "none";
     }
+
+    const el = document.getElementById(id);
+
+    // Kalau klik yang sama → tutup
+    if (activeElement === el) {
+        activeElement = null;
+        return;
+    }
+
+    // Tampilkan yang baru
+    el.style.display = "block";
+
+    activeElement = el;
 }
 </script>
 </head>
