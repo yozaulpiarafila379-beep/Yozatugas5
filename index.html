@@ -143,51 +143,31 @@ img{
     border-radius:8px;
 }
 </style>
-
 <script>
-  // function kamu di sini
-</script>
-
-</head>
-<body>
 let activeElement = null;
 
-// UNTUK GAMBAR (VS CODE)
 function showContent(id) {
+    // Tutup yang sedang aktif
     if (activeElement) {
         activeElement.style.display = "none";
     }
 
     const el = document.getElementById(id);
 
+    // Kalau klik yang sama → tutup
     if (activeElement === el) {
         activeElement = null;
         return;
     }
 
+    // Tampilkan yang baru
     el.style.display = "block";
+
     activeElement = el;
 }
-
-// UNTUK DARTPAD
-function runDart(id, url) {
-    if (activeElement) {
-        activeElement.style.display = "none";
-    }
-
-    const frame = document.getElementById(id);
-
-    if (activeElement === frame) {
-        activeElement = null;
-        return;
-    }
-
-    frame.src = url;
-    frame.style.display = "block";
-
-    activeElement = frame;
-}
 </script>
+</head>
+
 <body>
 <div class="container">
 
@@ -664,13 +644,9 @@ void main() {
 }
 </code></pre>
 </div>
-<button class="button" 
-onclick="runDart('dart8','https://dartpad.dev/embed-inline.html?id=8b4cd6b544dc7f7de2faae288b649d3b&split=60')">
-Tampilkan DartPad 8
+<button class="button" onclick="showContent('img7')">
+Tampilkan VS Code 7
 </button>
 
-<iframe id="dart8" style="display:none; width:100%; height:400px;"></iframe>
+<img id="img7" src="vscode7.png" style="display:none;">
 </div>
-
-
-
