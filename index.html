@@ -1135,3 +1135,117 @@ Tampilkan DartPad 11
     
 <iframe id="dart11" style="display:none; width:100%; height:300px;"></iframe>
 </div>
+
+<!-- 12 -->
+<div class="section">
+<h2>12. Studi Kasus State Management Menggunakan Sealed Class pada Dart </h2>
+<p><b>Pengertian Implementasi Sealed Class dengan Pattern Matching pada Dart:</b></p>
+
+<p><b>Pengertian Studi Kasus State Management Menggunakan Sealed Class pada Dart:</b></p>
+
+<ul>
+  <li>
+    Studi kasus state management menggunakan sealed class pada Dart merupakan 
+    penerapan konsep Object-Oriented Programming (OOP) untuk mengelola berbagai 
+    kondisi (state) dalam suatu aplikasi secara terstruktur dan sistematis.
+  </li>
+
+  <li>
+    Sealed class digunakan untuk membatasi pewarisan sehingga semua kemungkinan 
+    state harus didefinisikan dalam satu file yang sama.
+  </li>
+
+  <li>
+    Hal ini memungkinkan pengembang untuk mengetahui seluruh kondisi yang mungkin 
+    terjadi, seperti loading, success, dan error.
+  </li>
+
+  <li>
+    Pada contoh program, class AppState digunakan sebagai sealed class dengan 
+    turunan LoadingState, SuccessState, dan ErrorState yang merepresentasikan 
+    kondisi berbeda dalam aplikasi.
+  </li>
+
+  <li>
+    Dengan menggunakan pattern matching pada struktur <i>switch-case</i>, program 
+    dapat menentukan tindakan yang sesuai berdasarkan jenis state yang diterima.
+  </li>
+
+  <li>
+    Pendekatan ini membuat alur program lebih jelas, terorganisir, serta 
+    mempermudah pengelolaan dan pengembangan aplikasi.
+  </li>
+
+  <li>
+    Dengan demikian, penggunaan sealed class dalam state management membantu 
+    meningkatkan kejelasan struktur, efisiensi, dan kualitas kode program.
+  </li>
+</ul>
+<h3>Kode Dart:</h3>
+<div class="code-box">
+<pre><code>
+// Nama  : Yoza Ulpia Rafila
+// NIM   : 251410004
+// Kelas : SI2A
+
+// Sealed class
+sealed class AppState {}
+
+// State Loading
+class LoadingState extends AppState {}
+
+// State Success
+class SuccessState extends AppState {
+  final List<String> items;
+  SuccessState(this.items);
+}
+
+// State Error
+class ErrorState extends AppState {
+  final String message;
+  ErrorState(this.message);
+}
+
+// Handler (Pattern Matching)
+void updateUI(AppState state) {
+  switch (state) {
+    case LoadingState():
+      showLoading();
+    case SuccessState(:final items):
+      showItems(items);
+    case ErrorState(:final message):
+      showError(message);
+  }
+}
+
+// UI Functions
+void showLoading() {
+  print("⏳ Loading...");
+}
+
+void showItems(List<String> items) {
+  print("✅ Success! Items:");
+  for (int i = 0; i < items.length; i++) {
+    print("${i + 1}. ${items[i]}");
+  }
+}
+
+void showError(String message) {
+  print("❌ Error: $message");
+}
+
+// Main Program
+void main() {
+  updateUI(LoadingState());
+  updateUI(SuccessState(["Item A", "Item B", "Item C"]));
+  updateUI(ErrorState("Gagal memuat data"));
+}
+</code></pre>
+</div>
+<button class="button" 
+onclick="runDart('dart12','https://dartpad.dev/embed-inline.html?id=f09014933c6eb36087e929af1787659a&split=60&run=true')">
+Tampilkan DartPad 12
+</button>
+    
+<iframe id="dart12" style="display:none; width:100%; height:300px;"></iframe>
+</div> 
