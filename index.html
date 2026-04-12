@@ -143,14 +143,28 @@ img{
     border-radius:8px;
 }
 </style>
+</head>
 <script>
 let activeElement = null;
 
+// UNTUK GAMBAR (VS CODE)
 function showContent(id) {
-    // Tutup yang sedang aktif
     if (activeElement) {
         activeElement.style.display = "none";
     }
+
+    const el = document.getElementById(id);
+
+    if (activeElement === el) {
+        activeElement = null;
+        return;
+    }
+
+    el.style.display = "block";
+    activeElement = el;
+}
+
+// UNTUK DARTPAD
 function runDart(id, url) {
     if (activeElement) {
         activeElement.style.display = "none";
@@ -168,22 +182,7 @@ function runDart(id, url) {
 
     activeElement = frame;
 }
-    const el = document.getElementById(id);
-
-    // Kalau klik yang sama → tutup
-    if (activeElement === el) {
-        activeElement = null;
-        return;
-    }
-
-    // Tampilkan yang baru
-    el.style.display = "block";
-
-    activeElement = el;
-}
 </script>
-</head>
-
 <body>
 <div class="container">
 
