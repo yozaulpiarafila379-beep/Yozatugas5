@@ -208,16 +208,36 @@ function runDart(id, url) {
 <!-- 1 -->
 <div class="section">
 <h2>1. Pengenalan Sealed Class </h2>
-<p>
-Sealed class adalah jenis class dalam Dart yang digunakan untuk membatasi pewarisan (inheritance),
-sehingga class tersebut hanya dapat diturunkan (di-extend) oleh class lain yang berada dalam file yang sama.
-Dengan adanya pembatasan ini, pengembang dapat mengontrol dengan jelas struktur turunan class,
-sehingga program menjadi lebih aman, terorganisir, dan mudah dipahami.
+<p><b>Pengertian Sealed Class:</b></p>
 
-Pada kode berikut, ApiResponse digunakan sebagai sealed class yang memiliki dua turunan,
-yaitu Success dan Error. Kedua class tersebut merepresentasikan kondisi berhasil dan gagal,
-sehingga memudahkan dalam pengelolaan alur program dan pengecekan tipe data.
-</p>
+<ul>
+  <li>
+    Sealed class adalah jenis class dalam Dart yang membatasi pewarisan hanya 
+    dalam satu file yang sama.
+  </li>
+
+  <li>
+    Pembatasan ini memungkinkan pengembang untuk mengontrol semua class turunan 
+    secara lebih jelas.
+  </li>
+
+  <li>
+    Dengan sealed class, program menjadi lebih aman, terorganisir, dan mudah dipahami.
+  </li>
+
+  <li>
+    Pada program, ApiResponse digunakan sebagai sealed class dengan dua turunan, 
+    yaitu Success dan Error.
+  </li>
+
+  <li>
+    Kedua class tersebut merepresentasikan kondisi berhasil dan gagal.
+  </li>
+
+  <li>
+    Hal ini memudahkan pengelolaan alur program serta pengecekan tipe data.
+  </li>
+</ul>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
 <pre><code>
@@ -252,16 +272,38 @@ Tampilkan VS Code 1
 <!-- 2 -->
 <div class="section">
 <h2>2. Keuntungan Penggunaan Sealed class </h2>
-<p>
-Keuntungan sealed class dalam Dart adalah dapat membatasi pewarisan hanya dalam satu file,
-sehingga semua subclass harus dibuat dalam file yang sama. Hal ini membuat program lebih
-terkontrol, aman, dan mudah dipahami karena semua kemungkinan turunan sudah diketahui.
+<p><b>Keuntungan Sealed Class:</b></p>
 
-Pada kode berikut, ApiResponse digunakan sebagai sealed class dengan dua turunan,
-yaitu Success dan Error, yang mewakili kondisi berhasil dan gagal. Dengan adanya
-fungsi handleResponse(), program dapat melakukan pengecekan tipe untuk menampilkan
-hasil yang sesuai, sehingga alur program menjadi lebih rapi, jelas, dan terstruktur.
-</p>
+<ul>
+  <li>
+    Sealed class adalah class dalam Dart yang membatasi pewarisan hanya dalam satu file.
+  </li>
+
+  <li>
+    Semua subclass harus dibuat dalam file yang sama sehingga lebih terkontrol.
+  </li>
+
+  <li>
+    Hal ini membuat program lebih aman dan mudah dipahami karena semua kemungkinan turunan sudah diketahui.
+  </li>
+
+  <li>
+    Pada program, ApiResponse digunakan sebagai sealed class dengan dua turunan, 
+    yaitu Success dan Error.
+  </li>
+
+  <li>
+    Kedua class tersebut mewakili kondisi berhasil dan gagal.
+  </li>
+
+  <li>
+    Fungsi handleResponse() digunakan untuk mengecek tipe dan menampilkan hasil yang sesuai.
+  </li>
+
+  <li>
+    Penggunaan sealed class membuat alur program lebih rapi, jelas, dan terstruktur.
+  </li>
+</ul>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
 <pre><code>
@@ -305,17 +347,38 @@ Tampilkan VS Code 2
 <!-- 3 -->
 <div class="section">
 <h2>3. Polimorfisme (Method Overriding) </h2>
-<p>
-Polimorfisme adalah konsep dalam pemrograman berorientasi objek yang memungkinkan
-sebuah method memiliki banyak bentuk perilaku. Salah satu bentuk polimorfisme adalah
-method overriding, yaitu ketika subclass mendefinisikan ulang method yang sudah ada
-pada superclass.
+<p><b>Pengertian Polimorfisme (Method Overriding):</b></p>
 
-Pada kode berikut, class Animal memiliki method speak() yang menampilkan suara umum.
-Kemudian class Dog sebagai turunan dari Animal melakukan overriding pada method tersebut
-untuk menghasilkan suara yang berbeda, yaitu "Woof!". Hal ini menunjukkan bahwa method
-yang sama dapat memiliki perilaku yang berbeda tergantung pada objek yang memanggilnya.
-</p>
+<ul>
+  <li>
+    Polimorfisme adalah konsep dalam OOP yang memungkinkan sebuah method 
+    memiliki banyak bentuk perilaku.
+  </li>
+
+  <li>
+    Salah satu bentuk polimorfisme adalah method overriding, yaitu ketika 
+    subclass mendefinisikan ulang method dari superclass.
+  </li>
+
+  <li>
+    Pada program, class Animal memiliki method speak() sebagai method umum.
+  </li>
+
+  <li>
+    Class Dog sebagai turunan melakukan overriding pada method tersebut 
+    untuk menghasilkan suara "Woof!".
+  </li>
+
+  <li>
+    Hal ini menunjukkan bahwa method yang sama dapat memiliki perilaku 
+    yang berbeda tergantung pada objek yang memanggilnya.
+  </li>
+
+  <li>
+    Polimorfisme membuat program lebih fleksibel, mudah dikembangkan, 
+    dan dapat digunakan kembali.
+  </li>
+</ul>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
 <pre><code>
