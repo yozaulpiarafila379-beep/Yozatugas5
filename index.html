@@ -1217,20 +1217,16 @@ class ErrorState extends AppState {
   const ErrorState(this.message);
 }
 
-// Handler (Pattern Matching)
+// Handler (AMAN tanpa pattern matching)
 void updateUI(AppState state) {
-  switch (state) {
-    case LoadingState():
-      showLoading();
-      break;
-
-    case SuccessState(:final items):
-      showItems(items);
-      break;
-
-    case ErrorState(:final message):
-      showError(message);
-      break;
+  if (state is LoadingState) {
+    showLoading();
+  } 
+  else if (state is SuccessState) {
+    showItems(state.items);
+  } 
+  else if (state is ErrorState) {
+    showError(state.message);
   }
 }
 
