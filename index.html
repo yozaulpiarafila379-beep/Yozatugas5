@@ -221,34 +221,50 @@ function runDart(id, url) {
 <!-- 1 -->
 <div class="section">
 <h2>1.Sealed Class dalam Dart</h2>
-<p><b>Pengertian Sealed Class:</b></p>
+<p><b>Pembahasan:</b></p>
 
 <ul>
   <li>
-    Sealed class adalah jenis class dalam Dart yang membatasi pewarisan hanya 
-    dalam satu file yang sama.
+    Pada program, <b>ApiResponse</b> digunakan sebagai sealed class untuk 
+    merepresentasikan hasil dari suatu proses, yaitu kondisi berhasil 
+    (<b>Success</b>) dan gagal (<b>Error</b>).
   </li>
 
   <li>
-    Pembatasan ini memungkinkan pengembang untuk mengontrol semua class turunan 
-    secara lebih jelas.
+    Dengan menggunakan sealed class, semua kemungkinan turunan harus 
+    didefinisikan dalam satu file yang sama, sehingga struktur program 
+    menjadi lebih terkontrol dan tidak dapat ditambahkan secara sembarangan.
   </li>
 
   <li>
-    Dengan sealed class, program menjadi lebih aman, terorganisir, dan mudah dipahami.
+    Jika tidak menggunakan sealed class, maka class lain dapat membuat 
+    turunan baru di file berbeda yang dapat menyebabkan inkonsistensi 
+    dalam penanganan kondisi serta meningkatkan risiko kesalahan logika.
   </li>
 
   <li>
-    Pada program, ApiResponse digunakan sebagai sealed class dengan dua turunan, 
-    yaitu Success dan Error.
+    Dalam implementasinya, objek <b>ApiResponse</b> digunakan dalam proses 
+    pengecekan kondisi untuk menentukan apakah program berada pada 
+    keadaan berhasil atau gagal.
   </li>
 
   <li>
-    Kedua class tersebut merepresentasikan kondisi berhasil dan gagal.
+    Dengan struktur ini, program dapat melakukan pengecekan tipe data 
+    secara lebih aman karena seluruh kemungkinan kondisi sudah diketahui 
+    sejak awal.
   </li>
 
   <li>
-    Hal ini memudahkan pengelolaan alur program serta pengecekan tipe data.
+    Hal ini sangat efektif ketika digunakan bersama <i>type checking</i> 
+    atau <i>pattern matching</i>, karena program dapat langsung menangani 
+    setiap kondisi secara spesifik tanpa perlu pengecekan tambahan.
+  </li>
+
+  <li>
+    <b>Secara keseluruhan</b>, penggunaan sealed class pada program ini bertujuan 
+    untuk membatasi pewarisan, meningkatkan keamanan, menghindari 
+    inkonsistensi, serta memastikan alur kondisi program menjadi lebih 
+    jelas, terstruktur, dan mudah dikembangkan.
   </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
