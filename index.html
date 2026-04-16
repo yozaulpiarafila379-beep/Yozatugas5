@@ -1201,18 +1201,20 @@ Tampilkan DartPad 11
 sealed class AppState {}
 
 // State Loading
-class LoadingState extends AppState {}
+class LoadingState extends AppState {
+  const LoadingState();
+}
 
 // State Success
 class SuccessState extends AppState {
   final List<String> items;
-  SuccessState(this.items);
+  const SuccessState(this.items);
 }
 
 // State Error
 class ErrorState extends AppState {
   final String message;
-  ErrorState(this.message);
+  const ErrorState(this.message);
 }
 
 // Handler (Pattern Matching)
@@ -1220,10 +1222,15 @@ void updateUI(AppState state) {
   switch (state) {
     case LoadingState():
       showLoading();
+      break;
+
     case SuccessState(:final items):
       showItems(items);
+      break;
+
     case ErrorState(:final message):
       showError(message);
+      break;
   }
 }
 
@@ -1245,9 +1252,9 @@ void showError(String message) {
 
 // Main Program
 void main() {
-  updateUI(LoadingState());
-  updateUI(SuccessState(["Item A", "Item B", "Item C"]));
-  updateUI(ErrorState("Gagal memuat data"));
+  updateUI(const LoadingState());
+  updateUI(const SuccessState(["Item A", "Item B", "Item C"]));
+  updateUI(const ErrorState("Gagal memuat data"));
 }
 </code></pre>
 </div>
