@@ -926,24 +926,22 @@ Tampilkan DartPad 9
 <!-- 10 -->
 <div class="section">
 <h2>10.Penggunaan Mixin dalam Dart</h2>
-<p><b>Pembahasan Mixin dengan State pada Dart:</b></p>
+<p><b>Pembahasan Penggunaan Mixin pada Dart:</b></p>
 
 <ul>
   <li>
-    Mixin dengan state pada Dart merupakan penerapan konsep 
-    Object-Oriented Programming (OOP) yang memungkinkan sebuah class 
-    menggunakan kembali method dan properti dari mixin tanpa harus 
-    menggunakan pewarisan secara langsung.
+    Pada program, mixin digunakan untuk menambahkan perilaku ke dalam class 
+    tanpa harus menggunakan pewarisan secara langsung.
   </li>
 
   <li>
-    Mixin dengan state berarti mixin tidak hanya berisi method, tetapi juga 
-    memiliki properti (state) yang digunakan untuk menyimpan kondisi tertentu.
+    Mixin tidak hanya berisi method, tetapi juga memiliki properti (state) 
+    yang digunakan untuk menyimpan kondisi tertentu.
   </li>
 
   <li>
-    Dalam bahasa Dart, mixin digunakan dengan keyword <i>with</i>, sehingga 
-    sebuah class dapat memiliki lebih dari satu perilaku dari berbagai mixin.
+    Penggunaan keyword <i>with</i> memungkinkan sebuah class memiliki lebih 
+    dari satu perilaku dari berbagai mixin.
   </li>
 
   <li>
@@ -958,8 +956,8 @@ Tampilkan DartPad 9
   </li>
 
   <li>
-    Dengan demikian, penggunaan mixin dengan state membuat program lebih 
-    fleksibel, efisien, dan mudah dikembangkan.
+    Dengan pendekatan ini, program menjadi lebih fleksibel, efisien, dan 
+    mudah dikembangkan.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
@@ -1064,43 +1062,38 @@ Tampilkan DartPad 10
 
 <ul>
   <li>
-    Implementasi sealed class dengan pattern matching pada Dart merupakan 
-    penerapan konsep Object-Oriented Programming (OOP) yang digunakan untuk 
-    membatasi pewarisan class serta mempermudah pengelolaan berbagai kondisi 
-    dalam suatu program.
+    Pada program, sealed class <b>Status</b> digunakan untuk merepresentasikan 
+    beberapa kondisi, yaitu <b>Loading</b>, <b>Loaded</b>, dan <b>Failed</b>.
   </li>
 
   <li>
-    Sealed class memungkinkan pengembang untuk menentukan semua kemungkinan 
-    subclass dalam satu file, sehingga struktur program menjadi lebih terkontrol 
-    dan aman.
+    Setiap class turunan memiliki peran yang berbeda, seperti <b>Loaded</b> 
+    yang menyimpan data dan <b>Failed</b> yang menyimpan pesan error.
   </li>
 
   <li>
-    Pattern matching digunakan untuk memeriksa tipe objek dan langsung 
-    mengekstrak nilai yang ada di dalamnya dengan lebih ringkas dan jelas.
+    Struktur ini memastikan semua kemungkinan kondisi sudah didefinisikan 
+    dalam satu tempat sehingga lebih aman dan terkontrol.
   </li>
 
   <li>
-    Dalam bahasa Dart, pattern matching biasanya digunakan dalam struktur 
-    <i>switch-case</i> untuk menangani berbagai kondisi berdasarkan tipe class.
+    Pada fungsi <b>handleStatus()</b>, digunakan pattern matching dalam 
+    <i>switch-case</i> untuk mengecek tipe objek secara langsung.
   </li>
 
   <li>
-    Pada contoh program, class <b>Status</b> memiliki turunan seperti 
-    <b>Loading</b>, <b>Loaded</b>, dan <b>Failed</b> yang masing-masing 
-    merepresentasikan kondisi berbeda.
+    Setiap kondisi akan diproses sesuai jenisnya, seperti menampilkan 
+    "Loading...", data, atau pesan error.
   </li>
 
   <li>
-    Dengan menggunakan pattern matching, program dapat menampilkan hasil 
-    yang sesuai dengan kondisi tersebut secara lebih terstruktur dan efisien.
+    Dengan pendekatan ini, penulisan kode menjadi lebih ringkas, jelas, 
+    dan mudah dipahami.
   </li>
 
   <li>
-    Dengan demikian, penggunaan sealed class dan pattern matching membuat 
-    program lebih rapi, mudah dipahami, serta meminimalkan kesalahan dalam 
-    penanganan kondisi.
+    Hal ini menunjukkan bahwa kombinasi sealed class dan pattern matching 
+    membantu pengelolaan kondisi program secara lebih terstruktur.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
@@ -1168,40 +1161,38 @@ Tampilkan DartPad 11
 
 <ul>
   <li>
-    Studi kasus state management menggunakan sealed class pada Dart merupakan 
-    penerapan konsep Object-Oriented Programming (OOP) untuk mengelola berbagai 
-    kondisi (state) dalam suatu aplikasi secara terstruktur dan sistematis.
+    Pada program, state management diimplementasikan menggunakan sealed class 
+    <b>AppState</b> untuk merepresentasikan berbagai kondisi aplikasi.
   </li>
 
   <li>
-    Sealed class digunakan untuk membatasi pewarisan sehingga semua kemungkinan 
-    state harus didefinisikan dalam satu file yang sama.
+    Class <b>AppState</b> memiliki beberapa turunan yaitu <b>LoadingState</b>, 
+    <b>SuccessState</b>, dan <b>ErrorState</b> yang mewakili kondisi berbeda.
   </li>
 
   <li>
-    Hal ini memungkinkan pengembang untuk mengetahui seluruh kondisi yang mungkin 
-    terjadi, seperti loading, success, dan error.
+    Setiap state memiliki fungsi masing-masing, seperti <b>SuccessState</b> 
+    yang menyimpan data dan <b>ErrorState</b> yang menyimpan pesan kesalahan.
   </li>
 
   <li>
-    Pada contoh program, class <b>AppState</b> digunakan sebagai sealed class dengan 
-    turunan <b>LoadingState</b>, <b>SuccessState</b>, dan <b>ErrorState</b> yang 
-    merepresentasikan kondisi berbeda dalam aplikasi.
+    Dengan struktur sealed class, seluruh kemungkinan state sudah ditentukan 
+    dalam satu file sehingga lebih aman dan terkontrol.
   </li>
 
   <li>
-    Dengan menggunakan pattern matching pada struktur <b>switch-case</b>, program 
-    dapat menangani setiap state secara spesifik sesuai jenis data yang diterima.
+    Pada fungsi <b>updateUI()</b>, digunakan pattern matching dalam 
+    <b>switch-case</b> untuk menangani setiap state secara spesifik.
   </li>
 
   <li>
-    Pendekatan ini membuat alur program lebih jelas, terorganisir, serta 
-    mempermudah pengelolaan dan pengembangan aplikasi.
+    Setiap kondisi akan memanggil fungsi yang sesuai, seperti 
+    <b>showLoading()</b>, <b>showItems()</b>, dan <b>showError()</b>.
   </li>
 
   <li>
-    Dengan demikian, penggunaan sealed class dalam state management membantu 
-    meningkatkan kejelasan struktur, efisiensi, dan kualitas kode program.
+    Dengan pendekatan ini, alur program menjadi lebih jelas, terstruktur, 
+    dan mudah dikembangkan.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
