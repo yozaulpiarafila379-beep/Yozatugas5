@@ -1120,10 +1120,15 @@ void handleStatus(Status status) {
   switch (status) {
     case Loading():
       print("Loading...");
+      return;
+
     case Loaded(:final data):
       print("Data: $data");
+      return;
+
     case Failed(:final error):
       print("Error: $error");
+      return;
   }
 }
 
