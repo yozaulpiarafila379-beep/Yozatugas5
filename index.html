@@ -231,40 +231,32 @@ function runDart(id, url) {
   </li>
 
   <li>
-    Dengan menggunakan sealed class, semua kemungkinan turunan harus 
-    didefinisikan dalam satu file yang sama, sehingga struktur program 
-    menjadi lebih terkontrol dan tidak dapat ditambahkan secara sembarangan.
+    Dengan menggunakan sealed class, semua turunan harus didefinisikan 
+    dalam satu file yang sama, sehingga struktur program menjadi lebih 
+    terkontrol.
   </li>
 
   <li>
     Jika tidak menggunakan sealed class, maka class lain dapat membuat 
-    turunan baru di file berbeda yang dapat menyebabkan inkonsistensi 
-    dalam penanganan kondisi serta meningkatkan risiko kesalahan logika.
+    turunan baru di file berbeda yang berpotensi menyebabkan inkonsistensi 
+    dan kesalahan logika.
   </li>
 
   <li>
-    Dalam implementasinya, objek <b>ApiResponse</b> digunakan dalam proses 
-    pengecekan kondisi untuk menentukan apakah program berada pada 
-    keadaan berhasil atau gagal.
+    Dalam implementasinya, objek <b>ApiResponse</b> digunakan untuk 
+    menentukan kondisi program, apakah berada pada keadaan berhasil 
+    atau gagal.
   </li>
 
   <li>
     Dengan struktur ini, program dapat melakukan pengecekan tipe data 
-    secara lebih aman karena seluruh kemungkinan kondisi sudah diketahui 
-    sejak awal.
+    secara lebih aman karena seluruh kemungkinan kondisi sudah diketahui.
   </li>
 
   <li>
-    Hal ini sangat efektif ketika digunakan bersama <i>type checking</i> 
-    atau <i>pattern matching</i>, karena program dapat langsung menangani 
-    setiap kondisi secara spesifik tanpa perlu pengecekan tambahan.
-  </li>
-
-  <li>
-    <b>Secara keseluruhan</b>, penggunaan sealed class pada program ini bertujuan 
-    untuk membatasi pewarisan, meningkatkan keamanan, menghindari 
-    inkonsistensi, serta memastikan alur kondisi program menjadi lebih 
-    jelas, terstruktur, dan mudah dikembangkan.
+    Dengan demikian, penggunaan sealed class bertujuan untuk membatasi 
+    pewarisan serta memastikan alur kondisi program lebih jelas dan 
+    terstruktur.
   </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
