@@ -293,37 +293,28 @@ Tampilkan VS Code 1
 <!-- 2 -->
 <div class="section">
 <h2>2.Keuntungan Penggunaan Sealed Class</h2>
-<p><b>Pengertian Keuntungan penggunaan Sealed Class:</b></p>
-
-<ul>
-  <li>
-    Sealed class adalah class dalam Dart yang membatasi pewarisan hanya dalam satu file.
-  </li>
-
-  <li>
-    Semua subclass harus dibuat dalam file yang sama sehingga lebih terkontrol.
-  </li>
-
-  <li>
-    Hal ini membuat program lebih aman dan mudah dipahami karena semua kemungkinan turunan sudah diketahui.
-  </li>
-
-  <li>
-    Pada program, ApiResponse digunakan sebagai sealed class dengan dua turunan, 
-    yaitu Success dan Error.
-  </li>
-
-  <li>
-    Kedua class tersebut mewakili kondisi berhasil dan gagal.
-  </li>
-
-  <li>
-    Fungsi handleResponse() digunakan untuk mengecek tipe dan menampilkan hasil yang sesuai.
-  </li>
-
-  <li>
-    Penggunaan sealed class membuat alur program lebih rapi, jelas, dan terstruktur.
-  </li>
+<p><b>Pembahasan:</b></p>  <ul>  
+  <li>  
+    Sealed class merupakan class dalam Dart yang membatasi pewarisan   
+    hanya dalam satu file.  
+  </li>    <li>  
+    Dengan pembatasan tersebut, semua subclass harus dibuat dalam file   
+    yang sama sehingga struktur program menjadi lebih terkontrol.  
+  </li>    <li>  
+    Hal ini membuat program lebih aman dan mudah dipahami karena seluruh   
+    kemungkinan turunan sudah diketahui sejak awal.  
+  </li>    <li>  
+    Pada program, <b>ApiResponse</b> digunakan sebagai sealed class dengan   
+    dua turunan, yaitu <b>Success</b> dan <b>Error</b>.  
+  </li>    <li>  
+    Kedua class tersebut mewakili kondisi berhasil dan gagal dalam program.  
+  </li>    <li>  
+    Fungsi <b>handleResponse()</b> digunakan untuk mengecek tipe data dan   
+    menampilkan hasil yang sesuai berdasarkan kondisi tersebut.  
+  </li>    <li>  
+    Dengan demikian, penggunaan sealed class membuat alur program lebih   
+    rapi, jelas, dan terstruktur.  
+  </li>  
 </ul>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
