@@ -963,9 +963,9 @@ Tampilkan DartPad 9
 
 // Mixin dengan properti (state)
 mixin CanFly {
-  bool _isFlying = false; // property (private)
+  bool _isFlying = false;
 
-  bool get isFlying => _isFlying; // getter
+  bool get isFlying => _isFlying;
 
   void fly() {
     if (!_isFlying) {
@@ -987,9 +987,9 @@ mixin CanFly {
 }
 
 mixin CanSwim {
-  bool _isSwimming = false; // property (private)
+  bool _isSwimming = false;
 
-  bool get isSwimming => _isSwimming; // getter
+  bool get isSwimming => _isSwimming;
 
   void swim() {
     if (!_isSwimming) {
@@ -1003,47 +1003,41 @@ mixin CanSwim {
   void stopSwim() {
     if (_isSwimming) {
       _isSwimming = false;
-      print("Stop swimming!");
+      print("Stopped swimming!");
     } else {
       print("Already stopped swimming!");
     }
   }
 }
 
-// Class
+// Class dengan mixin (yang benar secara konsep OOP)
 class Bird with CanFly {}
 
-class Duck extends Bird with CanSwim {}
+class Duck with CanFly, CanSwim {}
 
 class Fish with CanSwim {}
 
 class Airplane with CanFly {}
 
-// Main
 void main() {
   print("=== Bird ===");
   Bird bird = Bird();
   bird.fly();
-  bird.fly();
-  bird.land();
   bird.land();
 
   print("\n=== Duck ===");
   Duck duck = Duck();
   duck.fly();
   duck.swim();
-  duck.swim();
   duck.stopSwim();
 
   print("\n=== Fish ===");
   Fish fish = Fish();
   fish.swim();
-  fish.stopSwim();
 
   print("\n=== Airplane ===");
   Airplane airplane = Airplane();
   airplane.fly();
-  airplane.land();
 }
 </code></pre>
 </div>
