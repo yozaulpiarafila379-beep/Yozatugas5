@@ -560,36 +560,33 @@ Tampilkan VS Code 5
 <div class="section">
 <h2>6.Inheritance</h2>
 <div>( Bonus 1 )</div>
-<p><b>Pembahasan Pewarisan (Inheritance):</b></p>
-
 <ul>
   <li>
-    Pewarisan (inheritance) adalah konsep dalam OOP yang memungkinkan class 
-    turunan mewarisi atribut dan method dari class induk.
+    Pada program ini, <b>Repository</b> berperan sebagai class induk 
+    yang memiliki method <b>create()</b>, <b>read()</b>, <b>update()</b>, dan <b>delete()</b>.
   </li>
 
   <li>
-    Konsep ini membantu mengurangi penulisan kode yang berulang (duplikasi).
+    Class <b>UserRepository</b> merupakan turunan dari <b>Repository</b> 
+    dengan menggunakan keyword <b>extends</b>.
   </li>
 
   <li>
-    Class turunan dapat melakukan method overriding, yaitu mendefinisikan ulang 
-    method dari class induk sesuai kebutuhan.
+    Class <b>UserRepository</b> mewarisi seluruh method dari class induk.
   </li>
 
   <li>
-    Pada program, class <b>Repository</b> sebagai class induk memiliki method 
-    <b>create()</b>, <b>read()</b>, <b>update()</b>, dan <b>delete()</b>.
+    Method <b>read()</b> di-override untuk menampilkan data yang lebih spesifik yaitu data user.
   </li>
 
   <li>
-    Class <b>UserRepository</b> sebagai turunan mewarisi method tersebut dan 
-    melakukan overriding pada method <b>read()</b> untuk menampilkan data user.
+    Pada fungsi <b>main()</b>, objek <b>UserRepository</b> dibuat dan digunakan 
+    untuk memanggil semua method yang tersedia.
   </li>
 
   <li>
-    Dengan demikian, penggunaan inheritance membuat program lebih fleksibel, 
-    efisien, dan mudah dikembangkan.
+    Program menampilkan hasil dari method <b>create()</b>, <b>read()</b>, 
+    <b>update()</b>, dan <b>delete()</b>.
   </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
