@@ -354,36 +354,35 @@ Tampilkan VS Code 2
 <!-- 3 -->
 <div class="section">
 <h2>3.Polimorfisme (Method Overriding)</h2>
-<p><b>Pembahasan Polimorfisme (Method Overriding):</b></p>
-
 <ul>
   <li>
-    Polimorfisme adalah konsep dalam OOP yang memungkinkan sebuah method 
-    memiliki banyak bentuk perilaku.
+    Pada program ini, class <b>Animal</b> memiliki method <b>speak()</b> 
+    yang menampilkan suara umum.
   </li>
 
   <li>
-    Salah satu bentuk polimorfisme adalah method overriding, yaitu ketika 
-    subclass mendefinisikan ulang method dari superclass.
+    Class <b>Dog</b> merupakan turunan dari <b>Animal</b> yang melakukan 
+    overriding pada method <b>speak()</b>.
   </li>
 
   <li>
-    Pada program, class <b>Animal</b> memiliki method <b>speak()</b> sebagai method dasar.
+    Pada class <b>Dog</b>, method <b>speak()</b> diubah menjadi 
+    menampilkan "Anjing: Woof!".
   </li>
 
   <li>
-    Class <b>Dog</b> sebagai turunan melakukan overriding pada method tersebut 
-    untuk menghasilkan suara "Woof!".
+    Pada fungsi <b>main()</b>, objek <b>Animal</b> memanggil method 
+    <b>speak()</b> dengan output suara umum.
   </li>
 
   <li>
-    Hal ini menunjukkan bahwa method yang sama dapat memiliki perilaku 
-    yang berbeda tergantung pada objek yang memanggilnya.
+    Objek <b>Dog</b> memanggil method <b>speak()</b> dengan output 
+    yang berbeda sesuai class turunan.
   </li>
 
   <li>
-    Dengan demikian, polimorfisme membuat program lebih fleksibel, 
-    mudah dikembangkan, dan dapat digunakan kembali.
+    Hal ini menunjukkan bahwa method yang sama dapat menghasilkan 
+    output yang berbeda tergantung objek yang digunakan.
   </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
