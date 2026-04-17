@@ -642,37 +642,31 @@ Tampilkan VS Code 6
 <div class="section">
 <h2>7.Utility Class</h2>
 <div>( Bonus 2 )</div>
-<p><b>Pembahasan Utility Class:</b></p>
-
 <ul>
   <li>
-    Utility class adalah class yang digunakan untuk menyediakan kumpulan method 
-    yang bersifat umum dan dapat digunakan tanpa harus membuat objek.
+    Pada program ini, <b>MathUtils</b> dibuat sebagai <i>final class</i> 
+    yang berisi method static.
   </li>
 
   <li>
-    Biasanya, utility class berisi method static yang dapat dipanggil langsung 
-    melalui nama class.
+    Class <b>MathUtils</b> memiliki dua method yaitu <b>tambah()</b> dan <b>kali()</b>.
   </li>
 
   <li>
-    Pada program, class <b>MathUtils</b> merupakan utility class yang didefinisikan 
-    sebagai final class dan memiliki method static yaitu <b>tambah()</b> dan <b>kali()</b>.
+    Kedua method tersebut digunakan untuk melakukan operasi penjumlahan dan perkalian.
   </li>
 
   <li>
-    Method tersebut digunakan untuk melakukan operasi matematika sederhana tanpa 
-    perlu membuat objek dari class <b>MathUtils</b>.
+    Method dipanggil langsung menggunakan nama class tanpa membuat objek.
   </li>
 
   <li>
-    Penggunaan utility class membuat kode menjadi lebih efisien, praktis, dan 
-    mudah digunakan kembali.
+    Pada fungsi <b>main()</b>, program memanggil <b>MathUtils.tambah()</b> 
+    dan <b>MathUtils.kali()</b>.
   </li>
 
   <li>
-    Dengan demikian, utility class membantu menyediakan fungsi umum yang dapat 
-    diakses secara langsung tanpa proses instansiasi.
+    Program kemudian menampilkan hasil penjumlahan dan perkalian ke layar.
   </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
@@ -708,40 +702,32 @@ Tampilkan VS Code 7
 <!-- 8 -->
 <div class="section">
 <h2>8.Abstraksi</h2>
-<p><b>Pembahasan Penerapan OOP Abstraksi pada Dart:</b></p>
-
 <ul>
   <li>
-    Abstraksi merupakan salah satu konsep dalam Object-Oriented Programming (OOP) 
-    yang digunakan untuk menyederhanakan program dengan menyembunyikan detail 
-    implementasi dan hanya menampilkan fungsi utama.
+    Pada program ini, <b>Bentuk</b> digunakan sebagai <i>abstract class</i> 
+    yang memiliki method <b>hitungLuas()</b>.
   </li>
 
   <li>
-    Abstraksi membantu programmer dalam membuat program yang lebih terstruktur, 
-    mudah dipahami, dan mudah dikembangkan.
+    Class <b>Bentuk</b> tidak dapat dibuat objek secara langsung.
   </li>
 
   <li>
-    Dalam bahasa Dart, abstraksi dapat diterapkan menggunakan <b>abstract class</b>, 
-    yaitu class yang tidak dapat dibuat objek secara langsung.
+    Class <b>Persegi</b>, <b>Lingkaran</b>, dan <b>Segitiga</b> merupakan turunan 
+    dari <b>Bentuk</b> yang mengimplementasikan method <b>hitungLuas()</b>.
   </li>
 
   <li>
-    Abstract class berisi method abstrak yang harus diimplementasikan oleh 
-    class turunan sesuai dengan kebutuhan masing-masing.
+    Setiap class turunan menghitung luas dengan cara yang berbeda sesuai bentuknya.
   </li>
 
   <li>
-    Pada contoh program, abstraksi diterapkan pada class <b>Bentuk</b> yang memiliki 
-    method <b>hitungLuas()</b>. Method tersebut kemudian diimplementasikan oleh 
-    class <b>Persegi</b>, <b>Lingkaran</b>, dan <b>Segitiga</b> untuk menghitung luas 
-    masing-masing bentuk dengan cara yang berbeda.
+    Pada fungsi <b>main()</b>, objek dari masing-masing class dibuat 
+    untuk menghitung luas.
   </li>
 
   <li>
-    Dengan demikian, abstraksi berfungsi sebagai kerangka dasar yang membantu 
-    menyederhanakan struktur program serta memudahkan pengembangan.
+    Program kemudian menampilkan hasil perhitungan luas persegi, lingkaran, dan segitiga.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
@@ -820,45 +806,32 @@ Tampilkan DartPad 8
 <!-- 9 -->
 <div class="section">
 <h2>9.Implementasi Abstraksi</h2>
-<p><b>Pembahasan Implementasi Abstraksi dalam Pemrograman:</b></p>
-
 <ul>
   <li>
-    Implementasi konsep abstraksi dalam pemrograman Dart merupakan penerapan 
-    salah satu prinsip Object-Oriented Programming (OOP) yang bertujuan untuk 
-    menyederhanakan program dengan menyembunyikan detail implementasi.
+    Pada program ini, <b>Burung</b> digunakan sebagai <i>abstract class</i> 
+    yang memiliki method <b>suara()</b>.
   </li>
 
   <li>
-    Dengan abstraksi, program hanya menampilkan fungsi utama sehingga lebih 
-    mudah dipahami dan digunakan.
+    Class <b>Burung</b> tidak dapat dibuat objek secara langsung.
   </li>
 
   <li>
-    Dalam bahasa Dart, abstraksi diterapkan menggunakan <b>abstract class</b>, 
-    yaitu class yang tidak dapat dibuat objek secara langsung dan berfungsi 
-    sebagai kerangka dasar bagi class turunan.
+    Class <b>BurungBiasa</b> dan <b>Bebek</b> merupakan turunan dari 
+    <b>Burung</b> yang mengimplementasikan method <b>suara()</b>.
   </li>
 
   <li>
-    Setiap class turunan wajib mengimplementasikan method yang telah 
-    didefinisikan pada abstract class sesuai dengan kebutuhan masing-masing.
+    Setiap class turunan menghasilkan suara yang berbeda.
   </li>
 
   <li>
-    Pada studi kasus, class <b>Burung</b> memiliki method <b>suara()</b> yang 
-    kemudian diimplementasikan oleh class <b>BurungBiasa</b> dan <b>Bebek</b> 
-    dengan hasil yang berbeda.
+    Pada fungsi <b>main()</b>, objek <b>BurungBiasa</b> dan <b>Bebek</b> dibuat 
+    menggunakan tipe <b>Burung</b>.
   </li>
 
   <li>
-    Hal ini menunjukkan bahwa abstraksi memungkinkan berbagai objek memiliki 
-    perilaku berbeda tetapi tetap menggunakan struktur dasar yang sama.
-  </li>
-
-  <li>
-    Dengan demikian, abstraksi membantu menyederhanakan program serta 
-    mempermudah pengembangan dan pemeliharaan kode.
+    Program kemudian memanggil method <b>suara()</b> untuk menampilkan hasil.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
@@ -911,38 +884,33 @@ Tampilkan DartPad 9
 <!-- 10 -->
 <div class="section">
 <h2>10.Mixin</h2>
-<p><b>Pembahasan Penggunaan Mixin pada Dart:</b></p>
-
 <ul>
   <li>
-    Pada program, mixin digunakan untuk menambahkan perilaku ke dalam class 
-    tanpa harus menggunakan pewarisan secara langsung.
+    Pada program ini, terdapat dua mixin yaitu <b>CanFly</b> dan <b>CanSwim</b>.
   </li>
 
   <li>
-    Mixin tidak hanya berisi method, tetapi juga memiliki properti (state) 
-    yang digunakan untuk menyimpan kondisi tertentu.
+    Mixin <b>CanFly</b> memiliki state <b>isFlying</b> serta method <b>fly()</b> dan <b>land()</b>.
   </li>
 
   <li>
-    Penggunaan keyword <i>with</i> memungkinkan sebuah class memiliki lebih 
-    dari satu perilaku dari berbagai mixin.
+    Mixin <b>CanSwim</b> memiliki state <b>isSwimming</b> serta method <b>swim()</b> dan <b>stopSwim()</b>.
   </li>
 
   <li>
-    Pada contoh program, mixin <b>CanFly</b> dan <b>CanSwim</b> memiliki state berupa 
-    <i>isFlying</i> dan <i>isSwimming</i> untuk mengatur kondisi objek.
+    Class <b>Bird</b>, <b>Duck</b>, <b>Fish</b>, dan <b>Airplane</b> menggunakan mixin dengan keyword <b>with</b>.
   </li>
 
   <li>
-    Class seperti <b>Bird</b>, <b>Duck</b>, <b>Fish</b>, dan <b>Airplane</b> 
-    menggunakan mixin tersebut untuk mendapatkan kemampuan terbang dan 
-    berenang sesuai kebutuhan.
+    Class <b>Duck</b> menggunakan dua mixin sehingga memiliki kemampuan terbang dan berenang.
   </li>
 
   <li>
-    Dengan pendekatan ini, program menjadi lebih fleksibel, efisien, dan 
-    mudah dikembangkan.
+    Pada fungsi <b>main()</b>, setiap objek dibuat dan method dipanggil sesuai kemampuan masing-masing.
+  </li>
+
+  <li>
+    Program kemudian menampilkan aktivitas seperti terbang, mendarat, dan berenang.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
@@ -1043,42 +1011,34 @@ Tampilkan DartPad 10
 <!-- 11 -->
 <div class="section">
 <h2>11.Sealed Class & Pattern Matching</h2>
-<p><b>Pembahasan Implementasi Sealed Class dengan Pattern Matching pada Dart:</b></p>
-
 <ul>
   <li>
-    Pada program, sealed class <b>Status</b> digunakan untuk merepresentasikan 
-    beberapa kondisi, yaitu <b>Loading</b>, <b>Loaded</b>, dan <b>Failed</b>.
+    Pada program ini, <b>Status</b> digunakan sebagai <i>sealed class</i>.
   </li>
 
   <li>
-    Setiap class turunan memiliki peran yang berbeda, seperti <b>Loaded</b> 
-    yang menyimpan data dan <b>Failed</b> yang menyimpan pesan error.
+    Terdapat tiga turunan yaitu <b>Loading</b>, <b>Loaded</b>, dan <b>Failed</b>.
   </li>
 
   <li>
-    Struktur ini memastikan semua kemungkinan kondisi sudah didefinisikan 
-    dalam satu tempat sehingga lebih aman dan terkontrol.
+    Class <b>Loaded</b> menyimpan data, sedangkan <b>Failed</b> menyimpan pesan error.
   </li>
 
   <li>
-    Pada fungsi <b>handleStatus()</b>, digunakan pattern matching dalam 
-    <i>switch-case</i> untuk mengecek tipe objek secara langsung.
+    Pada fungsi <b>handleStatus()</b>, digunakan <b>switch-case</b> untuk mengecek tipe objek.
   </li>
 
   <li>
-    Setiap kondisi akan diproses sesuai jenisnya, seperti menampilkan 
-    "Loading...", data, atau pesan error.
+    Setiap kondisi diproses berbeda, yaitu menampilkan loading, data, atau error.
   </li>
 
   <li>
-    Dengan pendekatan ini, penulisan kode menjadi lebih ringkas, jelas, 
-    dan mudah dipahami.
+    Pada fungsi <b>main()</b>, program memanggil <b>handleStatus()</b> 
+    dengan kondisi yang berbeda.
   </li>
 
   <li>
-    Hal ini menunjukkan bahwa kombinasi sealed class dan pattern matching 
-    membantu pengelolaan kondisi program secara lebih terstruktur.
+    Program kemudian menampilkan hasil sesuai dengan status yang diberikan.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
@@ -1142,42 +1102,37 @@ Tampilkan DartPad 11
 <!-- 12 -->
 <div class="section">
 <h2>12.State Management dengan Sealed Class</h2>
-<p><b>Pembahasan Studi Kasus State Management Menggunakan Sealed Class pada Dart:</b></p>
-
 <ul>
   <li>
-    Pada program, state management diimplementasikan menggunakan sealed class 
-    <b>AppState</b> untuk merepresentasikan berbagai kondisi aplikasi.
+    Pada program ini, <b>AppState</b> digunakan sebagai <i>sealed class</i>.
   </li>
 
   <li>
-    Class <b>AppState</b> memiliki beberapa turunan yaitu <b>LoadingState</b>, 
-    <b>SuccessState</b>, dan <b>ErrorState</b> yang mewakili kondisi berbeda.
+    Terdapat tiga turunan yaitu <b>LoadingState</b>, <b>SuccessState</b>, dan <b>ErrorState</b>.
   </li>
 
   <li>
-    Setiap state memiliki fungsi masing-masing, seperti <b>SuccessState</b> 
-    yang menyimpan data dan <b>ErrorState</b> yang menyimpan pesan kesalahan.
+    Class <b>SuccessState</b> menyimpan data berupa list item, 
+    sedangkan <b>ErrorState</b> menyimpan pesan error.
   </li>
 
   <li>
-    Dengan struktur sealed class, seluruh kemungkinan state sudah ditentukan 
-    dalam satu file sehingga lebih aman dan terkontrol.
+    Pada fungsi <b>updateUI()</b>, digunakan <b>switch-case</b> 
+    untuk mengecek tipe state.
   </li>
 
   <li>
-    Pada fungsi <b>updateUI()</b>, digunakan pattern matching dalam 
-    <b>switch-case</b> untuk menangani setiap state secara spesifik.
-  </li>
-
-  <li>
-    Setiap kondisi akan memanggil fungsi yang sesuai, seperti 
+    Setiap state akan memanggil fungsi yang berbeda yaitu 
     <b>showLoading()</b>, <b>showItems()</b>, dan <b>showError()</b>.
   </li>
 
   <li>
-    Dengan pendekatan ini, alur program menjadi lebih jelas, terstruktur, 
-    dan mudah dikembangkan.
+    Pada fungsi <b>main()</b>, program memanggil <b>updateUI()</b> 
+    dengan kondisi loading, success, dan error.
+  </li>
+
+  <li>
+    Program kemudian menampilkan output sesuai dengan state yang diberikan.
   </li>
 </ul>
 <h3>Kode Dart:</h3>
