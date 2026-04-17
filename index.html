@@ -221,42 +221,34 @@ function runDart(id, url) {
 <!-- 1 -->
 <div class="section">
 <h2>1.Sealed Class</h2>
-<p><b>Pembahasan:</b></p>
-
 <ul>
   <li>
-    Pada program, <b>ApiResponse</b> digunakan sebagai sealed class untuk 
-    merepresentasikan hasil dari suatu proses, yaitu kondisi berhasil 
-    (<b>Success</b>) dan gagal (<b>Error</b>).
+    Pada program ini, <b>ApiResponse</b> digunakan sebagai sealed class 
+    untuk membatasi pembuatan subclass.
   </li>
 
   <li>
-    Dengan menggunakan sealed class, semua turunan harus didefinisikan 
-    dalam satu file yang sama, sehingga struktur program menjadi lebih 
-    terkontrol.
+    Seluruh subclass yaitu <b>Success</b> dan <b>Error</b> dibuat 
+    dalam satu file yang sama.
   </li>
 
   <li>
-    Jika tidak menggunakan sealed class, maka class lain dapat membuat 
-    turunan baru di file berbeda yang berpotensi menyebabkan inkonsistensi 
-    dan kesalahan logika.
+    Class <b>Success</b> merepresentasikan kondisi berhasil, 
+    sedangkan <b>Error</b> merepresentasikan kondisi gagal.
   </li>
 
   <li>
-    Dalam implementasinya, objek <b>ApiResponse</b> digunakan untuk 
-    menentukan kondisi program, apakah berada pada keadaan berhasil 
-    atau gagal.
+    Dengan penggunaan sealed class, program hanya memiliki dua kondisi 
+    yang sudah ditentukan sejak awal.
   </li>
 
   <li>
-    Dengan struktur ini, program dapat melakukan pengecekan tipe data 
-    secara lebih aman karena seluruh kemungkinan kondisi sudah diketahui.
+    Hal ini membuat alur program lebih terkontrol dan mudah dipahami.
   </li>
 
   <li>
-    Dengan demikian, penggunaan sealed class bertujuan untuk membatasi 
-    pewarisan serta memastikan alur kondisi program lebih jelas dan 
-    terstruktur.
+    Pada fungsi <b>main()</b>, program hanya menampilkan contoh penggunaan 
+    sealed class.
   </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
