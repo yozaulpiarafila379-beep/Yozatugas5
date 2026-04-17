@@ -223,27 +223,26 @@ function runDart(id, url) {
 <h2>1.Sealed Class</h2>
 <ul>
   <li>
-    Pada program ini, <b>ApiResponse</b> digunakan sebagai sealed class 
-    untuk membatasi pembuatan subclass.
+    Pada program ini, <b>ApiResponse</b> digunakan sebagai class utama 
+    yang memiliki dua turunan, yaitu <b>Success</b> dan <b>Error</b>.
   </li>
 
   <li>
-    Seluruh subclass yaitu <b>Success</b> dan <b>Error</b> dibuat 
-    dalam satu file yang sama.
+    Class <b>Success</b> digunakan untuk menyimpan pesan ketika proses berhasil.
   </li>
 
   <li>
-    Class <b>Success</b> merepresentasikan kondisi berhasil, 
-    sedangkan <b>Error</b> merepresentasikan kondisi gagal.
+    Class <b>Error</b> digunakan untuk menyimpan pesan ketika terjadi kesalahan.
   </li>
 
   <li>
-    Dengan penggunaan sealed class, program hanya memiliki dua kondisi 
-    yang sudah ditentukan sejak awal.
+    Kedua class tersebut merupakan turunan dari <b>ApiResponse</b> 
+    dan dibuat dalam satu file yang sama.
   </li>
 
   <li>
-    Hal ini membuat alur program lebih terkontrol dan mudah dipahami.
+    Dengan struktur ini, program hanya menggunakan dua kondisi, 
+    yaitu berhasil dan gagal.
   </li>
 
   <li>
@@ -285,28 +284,32 @@ Tampilkan VS Code 1
 <!-- 2 -->
 <div class="section">
 <h2>2.Keuntungan Sealed Class</h2>
-<p><b>Pembahasan:</b></p>  <ul>  
-  <li>  
-    Sealed class merupakan class dalam Dart yang membatasi pewarisan   
-    hanya dalam satu file.  
-  </li>    <li>  
-    Dengan pembatasan tersebut, semua subclass harus dibuat dalam file   
-    yang sama sehingga struktur program menjadi lebih terkontrol.  
-  </li>    <li>  
-    Hal ini membuat program lebih aman dan mudah dipahami karena seluruh   
-    kemungkinan turunan sudah diketahui sejak awal.  
-  </li>    <li>  
-    Pada program, <b>ApiResponse</b> digunakan sebagai sealed class dengan   
-    dua turunan, yaitu <b>Success</b> dan <b>Error</b>.  
-  </li>    <li>  
-    Kedua class tersebut mewakili kondisi berhasil dan gagal dalam program.  
-  </li>    <li>  
-    Fungsi <b>handleResponse()</b> digunakan untuk mengecek tipe data dan   
-    menampilkan hasil yang sesuai berdasarkan kondisi tersebut.  
-  </li>    <li>  
-    Dengan demikian, penggunaan sealed class membuat alur program lebih   
-    rapi, jelas, dan terstruktur.  
-  </li>  
+<ul>
+  <li>
+    Pada program ini, <b>ApiResponse</b> digunakan sebagai class utama 
+    dengan dua turunan, yaitu <b>Success</b> dan <b>Error</b>.
+  </li>
+
+  <li>
+    Class <b>Success</b> digunakan saat data berhasil diambil, 
+    sedangkan <b>Error</b> digunakan saat terjadi kesalahan.
+  </li>
+
+  <li>
+    Pada fungsi <b>handleResponse()</b>, program mengecek tipe data 
+    menggunakan kondisi <b>if (response is Success)</b> dan 
+    <b>if (response is Error)</b>.
+  </li>
+
+  <li>
+    Jika kondisi <b>Success</b>, maka program menampilkan pesan berhasil, 
+    sedangkan jika <b>Error</b>, program menampilkan pesan kesalahan.
+  </li>
+
+  <li>
+    Pada fungsi <b>main()</b>, program memanggil kedua kondisi tersebut 
+    untuk menampilkan hasil yang berbeda.
+  </li>
 </ul>
 <h3>Kode Program VS Code:</h3>
 <div class="code-box">
